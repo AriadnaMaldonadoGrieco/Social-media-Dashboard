@@ -1,0 +1,44 @@
+//Dark Theme
+
+body.dark-theme {
+  --body-background: hsl(230, 17%, 14%);
+  --top-background: hsl(232, 19%, 15%);
+  --main-text: hsl(0, 0%, 100%);
+  --secondary-text: hsl(228, 34%, 66%);
+  --card-background: hsl(228, 28%, 20%);
+  --hover-background: hsl(228, 26%, 27%);
+  --chart: hsl(243, 51%, 70%);
+  --Toggle: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+//Light Theme
+
+body.light-theme {
+  --body-background: hsl(0, 0%, 100%);
+  --top-background: hsl(225, 100%, 98%);
+  --main-text: hsl(230, 17%, 14%);
+  --secondary-text: hsl(228, 12%, 44%);
+  --card-background: hsl(227, 47%, 96%);
+  --hover-background: hsl(232, 33%, 91%);
+  --chart: hsl(243, 51%, 70%);
+  --Toggle: hsl(230, 22%, 74%);
+
+  .secondary-titles {
+    color: var(--secondary-text);
+  }
+}
+
+//Primary
+$primary: (
+  "Lime-Green": hsl(163, 72%, 41%),
+  "Bright-Red": hsl(356, 69%, 56%),
+);
+
+//Social Media
+
+$socialmedia: (
+  "Facebook": hsl(195, 100%, 50%),
+  "Twitter": hsl(203, 89%, 53%),
+  "Instagram": linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%)),
+  "YouTube": hsl(348, 97%, 39%),
+);

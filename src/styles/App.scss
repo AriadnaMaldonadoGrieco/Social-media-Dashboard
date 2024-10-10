@@ -1,0 +1,228 @@
+@use "variables" as *;
+@use "socialcard" as *;
+@use "themetoggle" as *;
+@use "overviewcard" as *;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--body-background);
+  color: var(--main-text);
+  max-width: 90rem;
+  width: 100%;
+  margin: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  @media (min-width: 480px) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  @media (min-width: 768px) {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+
+  @media (min-width: 1440px) {
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+}
+
+h1 {
+  margin-bottom: 0.3rem;
+  font-size: 1.75rem;
+}
+
+.top-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background-color: var(--top-background);
+  z-index: -1;
+  border-radius: 0 0 1.25rem 1.25rem;
+}
+
+.section-dash-title {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+
+  @media (min-width: 768px) {
+    gap: 2rem;
+  }
+}
+
+.main-title {
+  display: flex;
+  flex-direction: column;
+  p {
+    margin: 0;
+    color: var(--secondary-text);
+    font-weight: 700;
+    font-size: 0.875rem;
+  }
+}
+
+//Modal
+
+dialog {
+  background-color: var(--body-background);
+  color: var(--main-text);
+  outline: none;
+  border: none;
+  padding-top: 1rem;
+  padding-left: 1.5rem;
+  border-radius: 1rem;
+  cursor: auto;
+  width: 62rem;
+  height: 28rem;
+  overflow: hidden;
+
+  @media (min-width: 768px) {
+    padding-left: 2.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    padding-left: 3.5rem;
+  }
+
+  h1 {
+    font-size: 2.188rem;
+    align-self: center;
+    margin: 0;
+  }
+
+  h2 {
+    margin: 0.5rem 0 0.5rem 0;
+    max-width: 30rem;
+  }
+
+  .top-background {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1rem;
+  }
+
+  button {
+    color: var(--main-text);
+    cursor: pointer;
+    background-color: var(--top-background);
+    position: absolute;
+    right: 0;
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    margin-right: 1rem;
+  }
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.close-btn {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--top-background);
+}
+
+.grid-modal-container {
+    max-width: 35rem;
+  
+    @media (min-width: 1024px) {
+      max-width: 40rem;
+    }
+  }
+  
+  .grid-modal {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+    margin-top: 1rem;
+    gap: 0.5rem;
+  
+    @media (min-width: 768px) {
+      grid-auto-flow: row; 
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr); 
+      grid-auto-flow: row; 
+    }
+  
+    h1 {
+      font-size: 1.75rem;
+      @media (min-width: 1024px) {
+          font-size: 2.188rem;
+        }
+    }
+  }
+  
+  .total-followers {
+    display: flex;
+    flex-direction: row;
+    gap: 0.7rem;
+    align-items: center;
+    max-width: 10rem;
+    font-size: 0.75rem;
+  
+    @media (min-width: 1024px) {
+      font-size: 0.875rem;
+    }
+  }
+  
+  .text-followers {
+    display: flex;
+    flex-direction: row;
+    gap: 0.7rem;
+    align-items: center;
+    max-width: 12rem;
+    font-size: 0.75rem;
+  
+    @media (min-width: 1024px) {
+      font-size: 0.875rem;
+    }
+  }  
+
+
+.dialog-number {
+  color: map-get($primary, "Lime-Green");
+}
+
+//Chart
+
+.chart-container {
+  margin-top: 1rem;
+  width: 18rem;
+  height: 10rem;
+
+  @media (min-width: 768px) {
+    width: 40rem;
+  }
+
+  @media (min-width: 1024px) {
+    width: 52rem;
+    height: 13rem;
+  }
+}
+
+.chart-months {
+  color: var(--secondary-text);
+}
+
+//Estilos para icono de google
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 10;
+}
+
