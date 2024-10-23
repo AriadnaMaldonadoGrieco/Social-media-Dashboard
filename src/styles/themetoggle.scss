@@ -43,6 +43,7 @@
     height: 0;
 }
 
+
 .slider {
     position: absolute;
     cursor: pointer;
@@ -66,6 +67,8 @@
     -webkit-transition: 0.2s;
     transition: 0.2s;
 }
+
+
 
 input:checked + .slider {
     background: var(--Toggle); 
