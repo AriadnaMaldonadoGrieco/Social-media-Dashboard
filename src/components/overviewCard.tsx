@@ -1,4 +1,3 @@
-"use client";
 import {
   LineChart,
   Line,
@@ -9,6 +8,13 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import { useRef } from "react";
+import PercentageNumbers from "./percentageNumbers";
+import downicon from "/images/icon-down.svg";
+import upicon from "/images/icon-up.svg";
+import facebook from "/images/icon-facebook.svg";
+import twitter from "/images/icon-twitter.svg";
+import instagram from "/images/icon-instagram.svg";
+import youtube from "/images/icon-youtube.svg";
 
 interface OverviewCardProps {
   socialIcon: string;
@@ -93,21 +99,21 @@ const OverviewCard: React.FC<OverviewCardProps> = ({
         ref={openButtonRef}
         onClick={openModal}
       >
-        <section className="overview-row">
+        <div className="overview-row">
           <div className="page-views">{viewsOrLikes}</div>
           <div>
             <img src={socialIcon}></img>
           </div>
-        </section>
-        <section className="overview-row">
+        </div>
+        <div className="overview-row">
           <div className="overview-number">{followersToday}</div>
-          <div className={textColorClass}>
+          <div className={`overview-green ${textColorClass}`}>
             <div>
               <img src={arrowIcon}></img>
             </div>
             {percentage}
           </div>
-        </section>
+        </div>
       </section>
 
       <dialog ref={modalRef} className="modal" id="modal">
@@ -127,7 +133,7 @@ const OverviewCard: React.FC<OverviewCardProps> = ({
           <section className="grid-modal-container">
             <article className="grid-modal">
               <div className="total-followers">
-                <h1 className=".overview-light">1987</h1>
+                <h1 className="overview-light">1987</h1>
                 <p>Total followers</p>
               </div>
               <div className="text-followers">

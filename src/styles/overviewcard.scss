@@ -1,46 +1,54 @@
-@use 'variables' as *;
+@use "variables" as *;
 
 //Overview cards
 
 .overview-container {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.overview-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .overview {
-    min-height: min(8.75rem, 40vh);
-    border-top: 0;
-    align-items: stretch;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    gap: 2rem;
+  min-height: min(8.75rem, 40vh);
+  border-top: 0;
+  align-items: stretch;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  gap: 2rem;
 }
 
 .overview-row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between; 
-    align-content: space-between;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
 .page-views {
-    color: var(--secondary-text);
-    font-size: 0.875rem;
-    font-weight: 700;
+  color: var(--secondary-text);
+  font-size: 0.875rem;
+  font-weight: 700;
 }
 
 .overview-number {
-    font-size: 1.75rem;
-    font-weight: 700;
+  font-size: 1.75rem;
+  font-weight: 700;
 }
 
 .overview-green {
-    align-self: flex-end;
-    display: flex;
-    flex-direction: row;
-    gap: 0.25rem;
-    padding-bottom: 0.5rem;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: row;
+  gap: 0.25rem;
+  padding-bottom: 0.5rem;
 }
-
-

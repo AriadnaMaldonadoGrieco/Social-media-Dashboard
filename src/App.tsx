@@ -46,7 +46,7 @@ function App() {
         </header>
         <section className="App">
           <div className="socials-grid">
-          {socialCardsData.map((card, index) => {
+            {socialCardsData.map((card, index) => {
               return (
                 <SocialCard
                   key={index}
@@ -63,20 +63,20 @@ function App() {
 
           <section className="overview-container">
             <h2 className="secondary-titles">Overview - Today</h2>
-            <div className="socials-grid">
-            {overviewCardsData.map((card, index) => {
-              return (
-                <OverviewCard
-                  key={index}
-                  socialIcon={card.socialIcon}
-                  viewsOrLikes={card.viewsOrLikes}
-                  followersToday={card.followersToday}
-                  arrowIcon={card.arrowIcon}
-                  cardIndex={index}
-                  percentage={card.percentage}
-                />
-              );
-            })}
+            <div className="overview-grid">
+              {overviewCardsData.map((card, index) => {
+                return (
+                  <OverviewCard
+                    key={index}
+                    socialIcon={card.socialIcon}
+                    viewsOrLikes={card.viewsOrLikes}
+                    followersToday={card.followersToday}
+                    arrowIcon={card.arrowIcon}
+                    cardIndex={index}
+                    percentage={card.percentage}
+                  />
+                );
+              })}
             </div>
           </section>
         </section>

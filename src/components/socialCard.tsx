@@ -1,4 +1,3 @@
-"use client";
 import { useRef } from "react";
 import {
   LineChart,
@@ -10,17 +9,23 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-
 interface SocialCardProps {
-  socialIcon: string; 
-  followers: string;   
+  socialIcon: string;
+  followers: string;
   followersToday: string;
   arrowIcon: string;
   cardIndex: number;
   username: string;
 }
 
-const SocialCard: React.FC<SocialCardProps> = ({socialIcon, followers, followersToday, arrowIcon, cardIndex, username }) => {
+const SocialCard: React.FC<SocialCardProps> = ({
+  socialIcon,
+  followers,
+  followersToday,
+  arrowIcon,
+  cardIndex,
+  username,
+}) => {
   const data = [
     {
       name: "4",
@@ -67,8 +72,6 @@ const SocialCard: React.FC<SocialCardProps> = ({socialIcon, followers, followers
   const modalRef = useRef<HTMLDialogElement>(null);
   const openButtonRef = useRef<HTMLButtonElement>(null);
 
-  
-
   const openModal = () => {
     modalRef.current?.showModal();
   };
@@ -97,7 +100,11 @@ const SocialCard: React.FC<SocialCardProps> = ({socialIcon, followers, followers
 
   return (
     <>
-      <section className={`socials-card ${borderClass}`} ref={openButtonRef} onClick={openModal}>
+      <section
+        className={`socials-card ${borderClass}`}
+        ref={openButtonRef}
+        onClick={openModal}
+      >
         <article className="icons-row">
           <img src={socialIcon}></img>
           <div className="">{username}</div>
