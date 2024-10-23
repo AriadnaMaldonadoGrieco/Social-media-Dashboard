@@ -8,13 +8,6 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import { useRef } from "react";
-import PercentageNumbers from "./percentageNumbers";
-import downicon from "/images/icon-down.svg";
-import upicon from "/images/icon-up.svg";
-import facebook from "/images/icon-facebook.svg";
-import twitter from "/images/icon-twitter.svg";
-import instagram from "/images/icon-instagram.svg";
-import youtube from "/images/icon-youtube.svg";
 
 interface OverviewCardProps {
   socialIcon: string;
